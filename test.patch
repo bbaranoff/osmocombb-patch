@@ -1,0 +1,15 @@
+diff --git a/src/target/firmware/board/compal_e88/flash.lds b/src/target/firmware/board/compal_e88/flash.lds
+index 67d727f..52148d9 100644
+--- a/src/target/firmware/board/compal_e88/flash.lds
++++ b/src/target/firmware/board/compal_e88/flash.lds
+@@ -91,8 +91,8 @@
+     PROVIDE(_got_end = ADDR(.got) + SIZEOF(.got));
+ 
+     /* reserved ram  */
+-    .compal.reservedram 0x800000 (NOLOAD) : {
+-        . = 0xff;
++    .compal.reservedram 0x800038 (NOLOAD) : {
++        . = 0xff - 0x38;
+     } > IRAM
+ 
+     /* initialized data */
