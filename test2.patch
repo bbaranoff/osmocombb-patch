@@ -1,0 +1,12 @@
+diff --git a/src/target/firmware/Makefile.inc b/src/target/firmware/Makefile.inc
+index 9049898..544143d 100644
+--- a/src/target/firmware/Makefile.inc
++++ b/src/target/firmware/Makefile.inc
+@@ -22,7 +22,7 @@
+ #ASFLAGS=--g$(DEBUGF) $(INCLUDES) -D__ASSEMBLY__
+ ASFLAGS=$(INCLUDES) -D__ASSEMBLY__
+ 
+-LDFLAGS = -nostartfiles -nostdlib -nodefaultlibs --gc-sections --cref
++LDFLAGS = -nostartfiles -nostdlib -nodefaultlibs --gc-sections --no-check-sections --cref
+ 
+ #### QUIET OUTPUT ####
